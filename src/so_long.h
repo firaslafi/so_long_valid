@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:19:01 by flafi             #+#    #+#             */
-/*   Updated: 2023/07/30 22:57:31 by flafi            ###   ########.fr       */
+/*   Updated: 2023/07/30 23:35:30 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@
 // replace it with my own printf
 # include "../printf/ft_printf.h"
 
-#define FLOOR_PATH "../assets/floor.xpm42"
-#define WALL_PATH "../assets/wall.xpm42"
-#define COIN_PATH "../assets/coin.xpm42"
-#define PLAYER_PATH "../assets/player.xpm42"
-#define EXIT_PATH "../assets/exit.xpm42"
+#define FLOOR_PATH "./assets/floor.xpm42"
+#define WALL_PATH "./assets/wall.xpm42"
+#define COIN_PATH "./assets/coin.xpm42"
+#define PLAYER_PATH "./assets/player.xpm42"
+#define EXIT_PATH "./assets/exit.xpm42"
 
 typedef struct s_player
 {
