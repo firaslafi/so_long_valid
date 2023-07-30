@@ -1,0 +1,220 @@
+!XPM42
+32 32 186 2 c
+   #00000000
+.  #000000FF
+X  #010000FF
+o  #010100FF
+O  #010101FF
++  #030202FF
+@  #30303FF
+#  #040100FF
+$  #040301FF
+%  #040202FF
+&  #050302FF
+*  #060302FF
+=  #070302FF
+-  #060402FF
+;  #060403FF
+:  #070403FF
+>  #50505FF
+,  #060505FF
+<  #060606FF
+1  #070606FF
+2  #060607FF
+3  #070607FF
+4  #070707FF
+5  #080403FF
+6  #080503FF
+7  #090503FF
+8  #090504FF
+9  #0A0604FF
+0  #080707FF
+q  #0C0705FF
+w  #0D0705FF
+e  #090807FF
+r  #0E0806FF
+t  #0F0906FF
+y  #0E0807FF
+u  #080708FF
+i  #0E0709FF
+p  #090808FF
+a  #090809FF
+s  #090909FF
+d  #0A0909FF
+f  #0B0909FF
+g  #0A090AFF
+h  #0B0A0AFF
+j  #0C0908FF
+k  #0D0A09FF
+l  #0E0A09FF
+z  #0E0B0AFF
+x  #110906FF
+c  #110A07FF
+v  #130B07FF
+b  #160B07FF
+n  #100908FF
+m  #110909FF
+M  #170D0AFF
+N  #120F0EFF
+B  #130F0EFF
+V  #150F0DFF
+C  #160E0CFF
+Z  #160F0CFF
+A  #160F0DFF
+S  #170F0DFF
+D  #180F0BFF
+F  #191204FF
+G  #1A1206FF
+H  #19110EFF
+J  #1B120FFF
+K  #171616FF
+L  #1C1A1AFF
+P  #1E1C1CFF
+I  #1F1C1CFF
+U  #1F1D1DFF
+Y  #211708FF
+T  #201511FF
+R  #211511FF
+E  #221612FF
+W  #201D1DFF
+Q  #221F1FFF
+!  #1E2021FF
+~  #232020FF
+^  #202122FF
+/  #2A2725FF
+(  #2A2726FF
+)  #472B20FF
+_  #422C24FF
+`  #482B20FF
+'  #4B2D22FF
+]  #4D2F23FF
+[  #4F2F23FF
+{  #532F24FF
+}  #533022FF
+|  #503024FF
+ . #513124FF
+.. #533124FF
+X. #523025FF
+o. #533224FF
+O. #533225FF
++. #513026FF
+@. #543124FF
+#. #543324FF
+$. #553325FF
+%. #563325FF
+&. #553326FF
+*. #563326FF
+=. #563426FF
+-. #573426FF
+;. #573427FF
+:. #5A3424FF
+>. #5B3425FF
+,. #593526FF
+<. #5F3C22FF
+1. #553329FF
+2. #583429FF
+3. #593429FF
+4. #583628FF
+5. #5A3628FF
+6. #5B3628FF
+7. #5B3728FF
+8. #5C3728FF
+9. #5C3729FF
+0. #5D372AFF
+q. #5D3829FF
+w. #5E3829FF
+e. #5F3929FF
+r. #5F392AFF
+t. #4D3D37FF
+y. #513F38FF
+u. #623929FF
+i. #60392AFF
+p. #603A2AFF
+a. #613A2BFF
+s. #603B2BFF
+d. #623B2AFF
+f. #653A29FF
+g. #61392CFF
+h. #613B2DFF
+j. #623B2CFF
+k. #633B2CFF
+l. #623B2DFF
+z. #633B2EFF
+x. #643C2CFF
+c. #663D2CFF
+v. #673E2DFF
+b. #663E2EFF
+n. #663F2FFF
+m. #6A3A2BFF
+M. #683E2DFF
+N. #683F2EFF
+B. #6A3F2EFF
+V. #6B4427FF
+C. #6C4427FF
+Z. #6E4821FF
+A. #6F4825FF
+S. #6B402FFF
+D. #714A23FF
+F. #724B23FF
+G. #744328FF
+H. #7C5128FF
+J. #7E5229FF
+K. #644336FF
+L. #664537FF
+P. #6B493BFF
+I. #714C3DFF
+U. #724D3DFF
+Y. #684B40FF
+T. #684C40FF
+R. #704F42FF
+E. #775244FF
+W. #765446FF
+Q. #AB2F27FF
+!. #824F28FF
+~. #D09D0CFF
+^. #D69F10FF
+/. #D2A105FF
+(. #DBA410FF
+). #E4AC0CFF
+_. #D4CBC7FF
+`. #D5CBC8FF
+'. #D1D0D0FF
+]. #D2D0D0FF
+[. #D6D3D2FF
+{. #DAD5D3FF
+}. #DED9D7FF
+|. #DFD9D7FF
+ X #DAD8D8FF
+.X #DFDAD9FF
+                                                                
+                                                                
+                                                                
+                          0             4 e                     
+                            1         0                         
+                0 0       O O O O O O O O                       
+                    0   O 1 1 4 j j j e r O                     
+                      O 1 u z z 2.j.=.V | 5                     
+                  1 O 1 1 V ' J >.f.8.D { 0 1                   
+                0   O 1 V ] T =.I.I.v.L.M O   u                 
+                    O j  .J } E..X{.W._.Y.O                     
+                  1 O S 2.M P.}.! N  ./ '.K                     
+                0   :  .v.>.I.}.^ N #./ '.K                     
+                      q  .N.i.E. X[.W.`.P.$                     
+                  5 : $ G >.l._ t.y.v.K.x :                     
+                r #.2.C./.Y  .2.@.{  .b =. .r                   
+              q #.N.z.C.).Z.i q q G v #.l.R ) x                 
+            5 @.i.z.:.m C.(.D.1.F.~.<.m :.:.R ) 0               
+            0 { T >.q $ 3.H.(.J.^.J.8.$ 0 i.8.S O               
+            O S 2.w.$ $ 8.z.G.Q.G.l.8.= $ 6.N.#.$               
+            : #.S.w.: $ w.v.r.m.l.z.w.$ $ i.N.i.5               
+            : #.w.=.= $ >.v.l.w.f.z.8.O $ #.8.@.:               
+              5 $ 0   O               O   0 $ 0                 
+                    @ u d d d d d d d d =                       
+                  1 P ~ ~ ~ W W W Q Q ^ I 1                     
+                $ L ~ W ^ I 1   1 W Q ~ ^ L O                   
+            O O 0 d d d d O       $ d d j j 0 O O               
+          O 1 1 0 1 1 1 0 O       O 1 1 1 1 0 1 1 O             
+          O O O O O O O O O       O O O O O O O O O             
+                                                                
+                                                                
+                                                                
