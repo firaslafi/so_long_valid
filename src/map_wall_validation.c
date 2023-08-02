@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:07:56 by flafi             #+#    #+#             */
-/*   Updated: 2023/07/30 22:58:50 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/02 22:13:06 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,26 @@ int elements_count_validation(t_map *map)
 {
 	map->c_count = elements_count(map->map, 'C');
 	if(elements_count(map->map, 'P') != 1)
-        ft_error("not found or multiple player!\n");
+        {
+			ft_memfree(map->map);
+			ft_error("not found or multiple player!\n");
+		}
 	if(elements_count(map->map, 'C') < 1)
-		ft_error("No collectable alert!\n");
+		{
+			ft_memfree(map->map);
+			ft_error("No collectable alert!\n");
+		}
 	if(elements_count(map->map, 'E') != 1)
-        ft_error("not found or multiple exit alert!\n");
+        {
+			ft_memfree(map->map);
+			ft_error("not found or multiple exit alert!\n");
+		}
 	return (1);
 }
 int full_line_check(char **map, int arr_len)
 {
-	int i;
 	int j;
-	
-	i = 1;
+
 	j = 0;
 	while(map[0][j] && map[arr_len - 1][j])
 	{
@@ -58,6 +65,7 @@ int full_line_check(char **map, int arr_len)
 			j++;
 		else
 		{
+			ft_memfree(map);
 			ft_error("not valid wall\n");
 			return (0);
 		}
@@ -72,6 +80,7 @@ int wall_firstlast_check(char **map, int arr_len, int i, int len)
 			i++;
 		else
 		{
+			ft_memfree(map);
 			ft_error("not valid wall\n");
 			return (0);
 		}
@@ -81,11 +90,9 @@ int wall_firstlast_check(char **map, int arr_len, int i, int len)
 int wall_check(char **map, int arr_len)
 {
 	int i;
-	int j;
 	int len;
 	
 	i = 1;
-	j = 0;
 	len = 1;
 	if (!full_line_check(map, arr_len))
 		return (0);

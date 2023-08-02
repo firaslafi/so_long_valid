@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:24:45 by flafi             #+#    #+#             */
-/*   Updated: 2023/07/30 22:48:48 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/02 22:10:04 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int map_is_rectangular(char **map, int rows)
 	{
 		if ( len != ft_strlen(map[i]))
 			{
+				ft_memfree(map);
 			    ft_error("map is not rectangular\n");
 			    return(0);
 			}
@@ -71,6 +72,7 @@ int verify_map_elements(char **map)
 				j++;
 			else
 				{
+					ft_memfree(map);
                     ft_error("map elements are not valid.\n");
 					return (0);
 				}

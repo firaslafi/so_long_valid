@@ -1,6 +1,6 @@
 # Compiler and flags
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iinclude
+CFLAGS = -Wall -Wextra -Werror -Iinclude -g
 
 # Source files
 SRCS = src/so_long.c src/map_validation.c src/map_wall_validation.c src/map_path.c \
@@ -16,7 +16,7 @@ LIBPRINTF = ./printf/libftprintf.a
 LIBMLX42 = ./MLX42/build/libmlx42.a
 
 # Executable
-EXECUTABLE = a.out
+EXECUTABLE = so_long
 
 all: $(EXECUTABLE)
 

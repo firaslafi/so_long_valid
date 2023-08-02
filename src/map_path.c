@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:43:43 by flafi             #+#    #+#             */
-/*   Updated: 2023/07/30 23:00:13 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/02 22:07:13 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,15 @@ int	ft_check_valid_path(t_map *map, int rows, int cols)
 	ft_fill(map_cpy, rows, cols);
 	if (elements_count(map_cpy, 'C') != 0)
 		{
+			ft_memfree(map_cpy);
             ft_error("no valid path\n");
             return (0);
         }
 	if (elements_count(map_cpy, 'E') == 1)
 		{
-             ft_error("no valid path\n");
+			ft_memfree(map_cpy);
+            ft_error("no valid path\n");
             return (0);
         }
-	return (1);
+	return (ft_memfree(map_cpy), 1);
 }

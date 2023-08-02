@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:19:01 by flafi             #+#    #+#             */
-/*   Updated: 2023/07/30 23:35:30 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/02 22:04:13 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <memory.h>
 # include "../libft/libft.h"
 #include "../getnextline/get_next_line.h"
 #include "../MLX42/include/MLX42/MLX42.h"
-// replace it with my own printf
 # include "../printf/ft_printf.h"
 
 #define FLOOR_PATH "./assets/floor.xpm42"
@@ -73,5 +71,6 @@ int	ft_check_valid_path(t_map *map, int y, int x);
 void ft_error(char *str); // new from here
 void	ft_init_img(t_graphics *var, mlx_t *mlx);
 void	ft_print_map(t_map *map);
+void	ft_memfree(char **array); // verify htis too
 
 #endif
