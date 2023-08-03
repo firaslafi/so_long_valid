@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:19:01 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:12:49 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/03 23:30:02 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ typedef struct s_player
 
 typedef struct s_graphics
 {
-	mlx_image_t	*floor_img;
-	mlx_image_t	*exit_img;
-	mlx_image_t	*coin_img;
-	mlx_image_t	*player_img;
-	mlx_image_t	*wall_img;
+	mlx_image_t	*f_img;
+	mlx_image_t	*e_img;
+	mlx_image_t	*c_img;
+	mlx_image_t	*p_img;
+	mlx_image_t	*w_img;
 }				t_graphics;
 
 typedef struct s_map
@@ -69,5 +69,8 @@ void			ft_error(char *str);
 void			ft_init_img(t_graphics *var, mlx_t *mlx);
 void			ft_print_map(t_map *map);
 void			ft_memfree(char **array);
+void			ft_map_init(char **argv, t_map *map);
+int				fill_map(char **argv, t_map *map);
+int				find_player_pos(t_map *map);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:18:28 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:11:44 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/03 23:33:14 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,31 +46,6 @@ int	fill_map(char **argv, t_map *map)
 	return (free(str), free(tmp), 1);
 }
 
-int	find_player_pos(t_map *map)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (map->map[i])
-	{
-		while (map->map[i][j])
-		{
-			if (map->map[i][j] == 'P')
-			{
-				map->player->pos_row = i;
-				map->player->pos_col = j;
-				return (1);
-			}
-			j++;
-		}
-		i++;
-		j = 0;
-	}
-	return (0);
-}
-
 void	ft_move(t_map *map, int row, int col)
 {
 	if (map->map[row][col] == '0' || map->map[row][col] == 'C'
@@ -82,8 +57,6 @@ void	ft_move(t_map *map, int row, int col)
 				map->c_count--;
 			map->map[map->player->pos_row][map->player->pos_col] = '0';
 			map->map[row][col] = 'P';
-			find_player_pos(map);
-			ft_print_map(map);
 		}
 		if (map->map[row][col] == 'E')
 		{
@@ -94,9 +67,9 @@ void	ft_move(t_map *map, int row, int col)
 			}
 			map->map[map->player->pos_row][map->player->pos_col] = 'E';
 			map->map[row][col] = 'P';
-			find_player_pos(map);
-			ft_print_map(map);
 		}
+		find_player_pos(map);
+		ft_print_map(map);
 		ft_printf("number of movements is : %i\n", ++(map->c_steps));
 	}
 }
@@ -136,18 +109,7 @@ int	main(int argc, char *argv[])
 		ft_error("Too many/few arguments\n");
 		exit(0);
 	}
-	map->c_steps = 0;
-	check_map_extension(argv);
-	fill_map(argv, map);
-	map_is_rectangular(map->map, map->rows);
-	verify_map_elements(map->map);
-	elements_count_validation(map);
-	wall_check(map->map, map->rows);
-	find_player_pos(map);
-	ft_check_valid_path(map, map->player->pos_row, map->player->pos_col);
-	map->mlx = mlx_init(map->cols * 32, map->rows * 32, "so_long", false);
-	if (!map->mlx)
-		ft_error("mlx init failed");
+	ft_map_init(argv, map);
 	ft_init_img(map->var, map->mlx);
 	ft_print_map(map);
 	leaks();

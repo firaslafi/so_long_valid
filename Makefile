@@ -4,7 +4,8 @@ CFLAGS = -Wall -Wextra -Werror -Iinclude -g
 
 # Source files
 SRCS = src/so_long.c src/map_validation.c src/map_wall_validation.c src/map_path.c \
-       getnextline/get_next_line.c src/error.c src/map_mlx.c getnextline/get_next_line_utils.c
+       getnextline/get_next_line.c src/error.c src/map_mlx.c getnextline/get_next_line_utils.c \
+	   src/map_init.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
