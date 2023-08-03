@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 23:31:53 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:13:12 by flafi            ###   ########.fr       */
+/*   Created: 2023/08/03 23:05:22 by flafi             #+#    #+#             */
+/*   Updated: 2023/08/03 23:05:57 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	ft_error(char *str)
+void	ft_memfree(char **array)
 {
-	ft_printf("Error\n");
-	ft_printf("%s\n", str);
-	exit(0);
+	int	i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }
