@@ -6,7 +6,7 @@
 #    By: flafi <flafi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/04 20:40:25 by flafi             #+#    #+#              #
-#    Updated: 2023/08/04 21:02:10 by flafi            ###   ########.fr        #
+#    Updated: 2023/08/04 23:41:58 by flafi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ clean:
 	@make -C ./printf clean --silent
 	@make -C ./MLX42/build clean --silent
 	rm -f  ./src/*.o ./src/*.out --silent
+	rm -f  ./getnextline/*.o ./getnextline/*.out --silent
 	@echo "\033[31m ------------------***༺ (\033[31m\033[32mCleaned!\033[31m)༻***------------------\n\033[0m"
 
 fclean: clean
