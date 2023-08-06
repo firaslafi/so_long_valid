@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 23:05:22 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:33:29 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/06 22:22:33 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,15 @@ void	ft_memfree(char **array)
 
 void	ft_map_init(char **argv, t_map *map)
 {
+	map->player = (struct s_player *)malloc(sizeof(struct s_player));
+	if (map->player == NULL)
+		ft_error("Memory allocation for player failed.\n");
+	map->var = (struct s_graphics *)malloc(sizeof(struct s_graphics));
+	if (map->var == NULL)
+		ft_error("Memory allocation for var failed.\n");
+	map->exit = (struct s_player *)malloc(sizeof(struct s_player));
+	if (map->exit == NULL)
+		ft_error("Memory allocation for exit failed.\n");
 	map->c_steps = 0;
 	check_map_extension(argv);
 	fill_map(argv, map);
@@ -64,4 +73,5 @@ void	ft_map_init(char **argv, t_map *map)
 	map->mlx = mlx_init(map->cols * 32, map->rows * 32, "so_long", false);
 	if (!map->mlx)
 		ft_error("mlx init failed");
+	map->exit = (struct s_player *)malloc(sizeof(struct s_player));
 }

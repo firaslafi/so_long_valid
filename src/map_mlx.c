@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 20:57:17 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:30:08 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/06 22:14:18 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ void	ft_print_map(t_map *map)
 				mlx_image_to_window(map->mlx, map->var->c_img, j * 32, i * 32);
 			else
 				mlx_image_to_window(map->mlx, map->var->f_img, j * 32, i * 32);
-			if (map->map[i][j] == 'E' && map->c_count == 0)
+			if ((int)j == map->exit->pos_col && (int)i == map->exit->pos_row
+				&& map->c_count == 0)
 				mlx_image_to_window(map->mlx, map->var->e_img, j * 32, i * 32);
 			j++;
 		}

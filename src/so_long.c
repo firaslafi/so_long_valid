@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:18:28 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:33:14 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/06 22:36:07 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,30 +48,29 @@ int	fill_map(char **argv, t_map *map)
 
 void	ft_move(t_map *map, int row, int col)
 {
-	if (map->map[row][col] == '0' || map->map[row][col] == 'C'
-		|| map->map[row][col] == 'E')
+	if (map->map[row][col] == '0' || map->map[row][col] == 'C')
 	{
-		if (map->map[row][col] == '0' || map->map[row][col] == 'C')
-		{
-			if (map->map[row][col] == 'C')
-				map->c_count--;
-			map->map[map->player->pos_row][map->player->pos_col] = '0';
-			map->map[row][col] = 'P';
-		}
-		if (map->map[row][col] == 'E')
-		{
-			if (map->c_count == 0)
-			{
-				ft_memfree(map->map);
-				exit(1);
-			}
-			map->map[map->player->pos_row][map->player->pos_col] = 'E';
-			map->map[row][col] = 'P';
-		}
-		find_player_pos(map);
-		ft_print_map(map);
-		ft_printf("number of movements is : %i\n", ++(map->c_steps));
+		if (map->map[row][col] == 'C')
+			map->c_count--;
+		map->map[map->player->pos_row][map->player->pos_col] = '0';
+		map->map[row][col] = 'P';
 	}
+	if (map->map[row][col] == 'E')
+	{
+		map->exit->pos_col = col;
+		map->exit->pos_row = row;
+		map->map[map->player->pos_row][map->player->pos_col] = '0';
+		map->map[row][col] = 'P';
+	}
+	if (map->c_count == 0 && row == map->exit->pos_row
+		&& col == map->exit->pos_col)
+	{
+		ft_memfree(map->map);
+		exit(1);
+	}
+	find_player_pos(map);
+	ft_print_map(map);
+	ft_printf("number of movements is : %i\n", ++(map->c_steps));
 }
 
 void	ft_hook(mlx_key_data_t data, void *param)
@@ -95,25 +94,20 @@ int	main(int argc, char *argv[])
 {
 	t_map	*map;
 
-	map = (struct s_map *)malloc(sizeof(struct s_map));
-	if (map == NULL)
-		ft_error("Memory allocation for map failed.\n");
-	map->player = (struct s_player *)malloc(sizeof(struct s_player));
-	if (map->player == NULL)
-		ft_error("Memory allocation for player failed.\n");
-	map->var = (struct s_graphics *)malloc(sizeof(struct s_graphics));
-	if (map->var == NULL)
-		ft_error("Memory allocation for var failed.\n");
 	if (argc != 2)
 	{
 		ft_error("Too many/few arguments\n");
 		exit(0);
 	}
+	map = (struct s_map *)malloc(sizeof(struct s_map));
+	if (map == NULL)
+		ft_error("Memory allocation for map failed.\n");
 	ft_map_init(argv, map);
 	ft_init_img(map->var, map->mlx);
 	ft_print_map(map);
-	leaks();
+	atexit(&leaks);
 	mlx_key_hook(map->mlx, ft_hook, map);
 	mlx_loop(map->mlx);
 	return (0);
 }
+

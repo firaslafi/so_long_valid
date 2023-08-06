@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 19:19:01 by flafi             #+#    #+#             */
-/*   Updated: 2023/08/03 23:30:02 by flafi            ###   ########.fr       */
+/*   Updated: 2023/08/06 22:07:01 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_map
 	char		**map;
 	mlx_t		*mlx;
 	t_player	*player;
+	t_player	*exit;
 	t_graphics	*var;
 }				t_map;
 
